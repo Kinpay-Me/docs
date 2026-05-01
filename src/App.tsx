@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { DocsProvider, DocsViewer } from "@jestrux/docs-viewer";
 import "@jestrux/docs-viewer/styles";
 import { docsConfig } from "./docs-config";
@@ -17,7 +17,7 @@ const logo = (
 
 export default function App() {
   return (
-    <BrowserRouter basename="/docs">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/overview/intro" replace />} />
         <Route
@@ -68,6 +68,6 @@ export default function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
