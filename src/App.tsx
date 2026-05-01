@@ -26,6 +26,10 @@ export default function App() {
             <DocsProvider config={{
               ...docsConfig,
               logo,
+              favicon: {
+                light: `${import.meta.env.BASE_URL}favicon.svg`,
+                dark: `${import.meta.env.BASE_URL}favicon-dark.svg`,
+              },
               theme: {
                 primary: "#9742E7",
                 primaryDark: "#B47BF0",
